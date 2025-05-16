@@ -1,0 +1,20 @@
+import random
+import math
+
+w1 = random.uniform(-0.5, 0.5)
+w2 = random.uniform(-0.5, 0.5)
+w3 = random.uniform(-0.5, 0.5)
+
+b1 = 0.5
+b2 = 0.7
+
+i1 = 0.05
+i2 = 0.1
+
+net_h = w1 * i1 + w2 * i2 + b1
+out_h = math.tanh(net_h)
+
+net_o = w3 * out_h + b2
+out_o = math.tanh(net_o)
+
+print("Network Output:", out_o)
